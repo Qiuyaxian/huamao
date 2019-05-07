@@ -1,0 +1,181 @@
+
+
+
+/* header module start */
+.logo{
+    width: 4.8rem;
+    height: 1.6rem
+}
+.user{
+    width: 1.15rem;
+    height: 1.2rem;
+    display: inline-block;
+    background: url(../images/icon/user.png) no-repeat left top;
+    background-size: cover;
+}
+.header{
+   padding-top: 0.5rem;
+   padding-bottom: 0.5rem;
+}
+/* header module end */
+
+/* nav module start */
+.nav{
+    padding: .3rem 0;
+    @include headerNav(white,#2678ce);
+    a{
+        color: white;
+        font-size: 0.6rem;
+        line-height: 0.9rem;
+        padding:0 0.9rem;
+    }
+}
+/* nav module end */
+
+/* tabSwitch module start */
+.tab-switch{
+    width:100%;
+    .tab-head{
+        border-radius: 0.15rem;
+        overflow: hidden;
+        .tab-link{
+           color: #2678ce;
+           font-size: 0.6rem;
+           line-height: 0.7rem;
+           padding: 0.4rem 0;
+        }
+        .tab-link-active{
+           background:#2678ce; 
+           color:white;
+        }
+
+    }
+    .tab-body{ 
+        .tab-item{
+           font-size: 0.6rem;
+           line-height: 0.7rem;
+        }
+    }
+}
+.border-bule{
+    border:1px solid #2678ce;
+}
+/* tabSwitch module end */
+
+/* table module start */
+table,th,td{
+    border-collapse: collapse;
+    border: 1px solid #0db4ce;
+    text-align: center;
+    font-style: normal;
+}
+th,td{
+    padding: .1rem 0;
+}
+.table{
+    width: 100%;
+}
+.thead{
+   color:white;
+}
+.tbody{
+
+}
+
+
+.t-color{
+    background: #42c8dc;
+    color: white;
+}
+
+.tables{
+    width: 100%;
+}
+.table-head{
+
+}
+.table-body{
+
+}
+.table-row{
+    font-size: 0px;
+    
+}
+.table-col{
+   display: inline-block;
+   font-size: 0.5rem;
+   line-height: 0.6rem;
+   text-align: center;
+   box-sizing:border-box;
+
+}
+.b-active{
+  border-bottom: 0.1rem solid #2678ce;
+}
+/* .t-border{
+    border: 1px solid #0db4ce;
+}
+.t-top{
+    border-top: 1px solid #0db4ce;
+}
+.t-bottom{
+    border-bottom: 1px solid #0db4ce;
+}
+.t-left{
+    border-left: 1px solid #0db4ce;
+}
+.t-right{
+    border-right: 1px solid #0db4ce;
+} */
+.flight{
+    width: 2.5rem;
+}
+.Espan{
+    width: 2.4rem;
+}
+.eta{
+    width: 2.4rem;
+}
+.schedule{
+    width: 2.4rem;
+}
+.type{
+    width: 2.4rem;
+}
+.model{
+    width: 2.8rem;
+}
+/* table module end */
+
+
+/* list module start */
+.list{
+
+}
+.list-item{
+   
+}
+.list-item-padding{
+    padding:0.5rem 0.5rem 0.5rem 0.5rem;
+}
+
+.list-item-text{
+    margin:0.2rem 0;
+    font-size: 0.6rem;
+    line-height: 0.7rem;
+}
+.border-top{
+    border-top: 1px solid #ccc;
+}
+.border-bottom{
+    border-bottom: 1px solid #ccc;
+}
+
+/* list module end */
+
+/* detail module start */
+
+/* detail module end */
+
+
+/* fixed */

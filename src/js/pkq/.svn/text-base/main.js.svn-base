@@ -1,0 +1,607 @@
+(function(win,id,factory){
+    "use strict"; //使用严格模式
+    //进行模块化打发，封装模块
+
+    if (typeof (module) !== 'undefined' && module.exports) { // CommonJS
+        module.exports = factory(id, win);
+    } else if (typeof (define) === 'function' && define.amd ) { // AMD
+        define(function () {
+            return factory(id, win);
+        });
+    } else { // <script>
+        win[id] = factory(id, win);
+    }
+
+})(window,'app',function(id, window){
+    "use strict";
+     
+    function appFn(){
+        var that = this;
+        that.data = [
+               {
+                   "flight":'HU',
+                   "cargoType":'普货',
+                   'route':'CAN-CKG-ABJ',
+                   "priceValidity":'2017/6/2 0:00:00 - 当前有效',
+                   "price":'34.50',
+                   "model":'客机',
+                   "detail":{
+                      "currencyType":'CNY',
+                      "security":'0',
+                      "ground":'0',
+                      "remarks":'无',
+                      "intermodal":'1',
+
+                      "fuel":'0',
+                      "area":'中国',
+                      "product":'未知',
+                   },
+                   "info":{
+                      "title":'一程航班：CAN-CKG',
+                      "table":[
+                         {
+                           "flight":'HU7655',
+                           "etd":'09:25:00',
+                           "eta":'12:00:00 ',
+                           "schedule":'1,3,5,7',
+                           "type":'客机',
+                           "modelType":'大'
+                         }
+                      ]
+                   }
+               },{
+                   "flight":'HU',
+                   "cargoType":'普货',
+                   'route':'CAN-CKG-ABJ',
+                   "priceValidity":'2017/6/2 0:00:00 - 当前有效',
+                   "price":'34.50',
+                   "model":'客机',
+                   "detail":{
+                      "currencyType":'CNY',
+                      "security":'0',
+                      "ground":'0',
+                      "remarks":'无',
+                      "intermodal":'1',
+
+                      "fuel":'0',
+                      "area":'中国',
+                      "product":'未知',
+                   },
+                   "info":{
+                      "title":'一程航班：CAN-CKG',
+                      "table":[
+                         {
+                           "flight":'HU7655',
+                           "etd":'09:25:00',
+                           "eta":'12:00:00 ',
+                           "schedule":'1,3,5,7',
+                           "type":'客机',
+                           "modelType":'大'
+                         }
+                      ]
+                   }
+               },{
+                   "flight":'HU',
+                   "cargoType":'普货',
+                   'route':'CAN-CKG-ABJ',
+                   "priceValidity":'2017/6/2 0:00:00 - 当前有效',
+                   "price":'34.50',
+                   "model":'客机',
+                   "detail":{
+                      "currencyType":'CNY',
+                      "security":'0',
+                      "ground":'0',
+                      "remarks":'无',
+                      "intermodal":'1',
+
+                      "fuel":'0',
+                      "area":'中国',
+                      "product":'未知',
+                   },
+                   "info":{
+                      "title":'一程航班：CAN-CKG',
+                      "table":[
+                         {
+                           "flight":'HU7655',
+                           "etd":'09:25:00',
+                           "eta":'12:00:00 ',
+                           "schedule":'1,3,5,7',
+                           "type":'客机',
+                           "modelType":'大'
+                         }
+                      ]
+                   }
+               },{
+                   "flight":'HU',
+                   "cargoType":'普货',
+                   'route':'CAN-CKG-ABJ',
+                   "priceValidity":'2017/6/2 0:00:00 - 当前有效',
+                   "price":'34.50',
+                   "model":'客机',
+                   "detail":{
+                      "currencyType":'CNY',
+                      "security":'0',
+                      "ground":'0',
+                      "remarks":'无',
+                      "intermodal":'1',
+
+                      "fuel":'0',
+                      "area":'中国',
+                      "product":'未知',
+                   },
+                   "info":{
+                      "title":'一程航班：CAN-CKG',
+                      "table":[
+                         {
+                           "flight":'HU7655',
+                           "etd":'09:25:00',
+                           "eta":'12:00:00 ',
+                           "schedule":'1,3,5,7',
+                           "type":'客机',
+                           "modelType":'大'
+                         }
+                      ]
+                   }
+               },{
+                   "flight":'HU',
+                   "cargoType":'普货',
+                   'route':'CAN-CKG-ABJ',
+                   "priceValidity":'2017/6/2 0:00:00 - 当前有效',
+                   "price":'34.50',
+                   "model":'客机',
+                   "detail":{
+                      "currencyType":'CNY',
+                      "security":'0',
+                      "ground":'0',
+                      "remarks":'无',
+                      "intermodal":'1',
+
+                      "fuel":'0',
+                      "area":'中国',
+                      "product":'未知',
+                   },
+                   "info":{
+                      "title":'一程航班：CAN-CKG',
+                      "table":[
+                         {
+                           "flight":'HU7655',
+                           "etd":'09:25:00',
+                           "eta":'12:00:00 ',
+                           "schedule":'1,3,5,7',
+                           "type":'客机',
+                           "modelType":'大'
+                         }
+                      ]
+                   }
+               },{
+                   "flight":'HU',
+                   "cargoType":'普货',
+                   'route':'CAN-CKG-ABJ',
+                   "priceValidity":'2017/6/2 0:00:00 - 当前有效',
+                   "price":'34.50',
+                   "model":'客机',
+                   "detail":{
+                      "currencyType":'CNY',
+                      "security":'0',
+                      "ground":'0',
+                      "remarks":'无',
+                      "intermodal":'1',
+
+                      "fuel":'0',
+                      "area":'中国',
+                      "product":'未知',
+                   },
+                   "info":{
+                      "title":'一程航班：CAN-CKG',
+                      "table":[
+                         {
+                           "flight":'HU7655',
+                           "etd":'09:25:00',
+                           "eta":'12:00:00 ',
+                           "schedule":'1,3,5,7',
+                           "type":'客机',
+                           "modelType":'大'
+                         }
+                      ]
+                   }
+               },{
+                   "flight":'HU',
+                   "cargoType":'普货',
+                   'route':'CAN-CKG-ABJ',
+                   "priceValidity":'2017/6/2 0:00:00 - 当前有效',
+                   "price":'34.50',
+                   "model":'客机',
+                   "detail":{
+                      "currencyType":'CNY',
+                      "security":'0',
+                      "ground":'0',
+                      "remarks":'无',
+                      "intermodal":'1',
+
+                      "fuel":'0',
+                      "area":'中国',
+                      "product":'未知',
+                   },
+                   "info":{
+                      "title":'一程航班：CAN-CKG',
+                      "table":[
+                         {
+                           "flight":'HU7655',
+                           "etd":'09:25:00',
+                           "eta":'12:00:00 ',
+                           "schedule":'1,3,5,7',
+                           "type":'客机',
+                           "modelType":'大'
+                         }
+                      ]
+                   }
+               },{
+                   "flight":'HU',
+                   "cargoType":'普货',
+                   'route':'CAN-CKG-ABJ',
+                   "priceValidity":'2017/6/2 0:00:00 - 当前有效',
+                   "price":'34.50',
+                   "model":'客机',
+                   "detail":{
+                      "currencyType":'CNY',
+                      "security":'0',
+                      "ground":'0',
+                      "remarks":'无',
+                      "intermodal":'1',
+
+                      "fuel":'0',
+                      "area":'中国',
+                      "product":'未知',
+                   },
+                   "info":{
+                      "title":'一程航班：CAN-CKG',
+                      "table":[
+                         {
+                           "flight":'HU7655',
+                           "etd":'09:25:00',
+                           "eta":'12:00:00 ',
+                           "schedule":'1,3,5,7',
+                           "type":'客机',
+                           "modelType":'大'
+                         }
+                      ]
+                   }
+               },{
+                   "flight":'HU',
+                   "cargoType":'普货',
+                   'route':'CAN-CKG-ABJ',
+                   "priceValidity":'2017/6/2 0:00:00 - 当前有效',
+                   "price":'34.50',
+                   "model":'客机',
+                   "detail":{
+                      "currencyType":'CNY',
+                      "security":'0',
+                      "ground":'0',
+                      "remarks":'无',
+                      "intermodal":'1',
+
+                      "fuel":'0',
+                      "area":'中国',
+                      "product":'未知',
+                   },
+                   "info":{
+                      "title":'一程航班：CAN-CKG',
+                      "table":[
+                         {
+                           "flight":'HU7655',
+                           "etd":'09:25:00',
+                           "eta":'12:00:00 ',
+                           "schedule":'1,3,5,7',
+                           "type":'客机',
+                           "modelType":'大'
+                         }
+                      ]
+                   }
+               },{
+                   "flight":'HU',
+                   "cargoType":'普货',
+                   'route':'CAN-CKG-ABJ',
+                   "priceValidity":'2017/6/2 0:00:00 - 当前有效',
+                   "price":'34.50',
+                   "model":'客机',
+                   "detail":{
+                      "currencyType":'CNY',
+                      "security":'0',
+                      "ground":'0',
+                      "remarks":'无',
+                      "intermodal":'1',
+
+                      "fuel":'0',
+                      "area":'中国',
+                      "product":'未知',
+                   },
+                   "info":{
+                      "title":'一程航班：CAN-CKG',
+                      "table":[
+                         {
+                           "flight":'HU7655',
+                           "etd":'09:25:00',
+                           "eta":'12:00:00 ',
+                           "schedule":'1,3,5,7',
+                           "type":'客机',
+                           "modelType":'大'
+                         }
+                      ]
+                   }
+               }
+        ];
+        that.loading = false;      //滚动加载控制器
+        that.scrollTimer = null;   //滚动加载时间控制器
+        that.listDetail = false;   //查看详情操作
+        that.templateId = null;    //模板
+        that.containter = null;    //存放数据的容器
+        that.type = null;          //用于ajax提交数据
+        that.pageNumber = 0;       //用于加载数据
+        that.pageSize = 5;         //用加载条数
+        that.scrollContainter = null
+    };
+
+    appFn.prototype = {
+       constructor:'appFn',
+       init:function(options){  //页面初始化
+            var that = this,
+                html = document.documentElement;
+                html.style.fontSize = html.getBoundingClientRect().width / 16 + 'px';
+     
+            if(FastClick){
+                FastClick.attach(document.body);
+            };
+            var opt = $.extend({
+               "templateId":'one',
+            },options);
+
+            /*$.ajax({
+                type: "",   
+                url: "data.json",        
+                async: false,
+                　　　　　　　
+                success:function(data){
+                    console.log(data);
+                }
+            });*/
+
+            that.ajax({
+                url:'data.json',
+                type:'GET',
+                dataType: "text",　
+                beforeSend:function(){
+                   console.log('start')
+                },
+                success:function(data){
+                    
+                   if(data && data != ''){
+                       that.templ({
+                            "templateId":opt.templateId,  //模板id
+                            "containter":opt.containter,  //输出容器,
+                            "data":data
+                       });
+                   };
+                }
+            });
+
+            //页面面初始化请求数据
+            that.templateId = opt.templateId;
+            that.containter = $('#tab-item-list');
+            that.scrollContainter = $('#tab-item1');
+            //tab页面初始切换请求数据
+            $('.tab-head').tab({
+                'tabLink':'tab-link',   //点击触发事件样式
+                'toggle':'data-toggle',    //切换关联点
+                'tabSwitch':'tab-item',  //切换tabcontent样式
+                'activeClass':'b-active',
+                'callback':function(tabhead,tabbody){
+                    that.containter = $('ul.list',tabbody);
+                    that.scrollContainter = tabbody;
+                    that.templ({
+                        "templateId":that.templateId,  //模板id
+                        "containter":that.containter,  //输出容器,
+                        "data":that.data
+                    });
+                    that.scroll({
+                        "templateId":that.templateId,  //模板id
+                        "containter":that.containter,
+                    });
+                    console.log(that.containter);
+                    that.containter.on('click','.list-item',function(){
+                          var $this = $(this),
+                              $listItem = $('.list-item',that.containter);
+                          $this.index = $this.index();
+                          
+                          //判断当前是否有none
+                          $listItem.each(function(index,elem){
+
+                               if(index == $this.index){
+                                  
+                                  if($('.detail',$(elem)).hasClass('none')){
+                                      $('.detail',$(elem)).removeClass('none');
+                                  }else{
+                                      $('.detail',$(elem)).addClass('none');
+                                  };
+                               }else{
+                                  $('.detail',$(elem)).addClass('none');
+                               };
+                          });
+                    });
+                }
+            }); 
+
+            //调用滚屏
+            that.scroll({
+                "templateId":that.templateId,  //模板id
+                "containter":that.containter,
+            });
+           
+            
+
+            return that;        // 以便进行链式操作                
+       },  
+       tab:function(options){   //tab切换
+          
+       },
+       scroll:function(options){       //滚动加载
+            
+            var that = this;
+            console.log(that.scrollContainter)
+            that.scrollContainter.infinite().on("infinite", function() {
+                  var $this = $(this);
+                   console.log(that.containter.parent().attr('data-toggle'),"that.containter")
+                  //模拟数据加载
+                  if(that.loading) return;
+                  that.loading = true;
+                  $.showLoading();
+                  if(that.scrollTimer != null){
+                       clearTimeout(that.scrollTimer);
+                  }
+                  that.scrollTimer = setTimeout(function() {
+                        
+                        that.templ({
+                            "templateId":that.templateId,  //模板id
+                            "containter":that.containter,  //输出容器,
+                            "data":that.data
+                        });
+                        
+                        that.loading = false;
+                        $.hideLoading();
+
+                  }, 2000);
+
+                  //真实的数据加载
+                  /*that.ajax({
+                        'url':'../libs/data/data.json',
+                        'type':'POST',
+                        'beforeSend':function(){
+                           console.log('start')
+                        },
+                        'success':function(data){
+
+                           console.log(data,"init");
+                           if(data && data != ''){
+                               that.templ({
+                                    "templateId":'list',  //模板id
+                                    "containter":tabbody,  //输出容器,
+                                    "data":that.data
+                               });
+                           };
+                           
+                        }; 
+                 });*/
+            });
+
+            return that;
+       },
+       detail:function(options){
+           var that = this;
+              
+            if(that.containter != null){
+                //列表点击操作
+                that.containter.on('click','.list-item',function(){
+                      var $this = $(this),
+                          $listItem = $('.list-item',that.containter);
+                      $this.index = $this.index();
+                      //判断当前是否有none
+                      $listItem.each(function(index,elem){
+                           if(index == $this.index){
+                              if($('.detail',$(elem)).hasClass('none')){
+                                  $('.detail',$(elem)).removeClass('none');
+                              }else{
+                                  $('.detail',$(elem)).addClass('none');
+                              };
+                           }else{
+                              $('.detail',$(elem)).addClass('none');
+                           };
+                      });
+                });
+            }   
+
+           
+       },
+       templ:function(options){        //模板方法
+            var opt = $.extend({
+                  "templateId":'',  //模板id
+                  "containter":'',  //输出容器,
+                  "data":{}         //数据
+               },options);
+           
+               if(opt && opt.templateId != '' && opt.containter != ''){
+                  //遍历数组
+                  for(var i=0,len = opt.data.length;i<len;i++){
+
+                      var tmpl = $('#'+opt.templateId).html(),           
+                          compiledTemplate = Template7.compile(tmpl),
+                           //把数据打包丢进模板
+                          tempHtml = compiledTemplate(opt.data[i]);
+                          //append数据
+                          opt.containter.append(tempHtml); 
+                  };
+               }; 
+       },
+       ajax:function(options){         //异步请求
+         
+            if(options.url && options.url != ''){
+              
+               $.ajax({
+                  url:options.url || "",
+                  type:options.type || "POST",
+                  data:options.data || {},
+                  dataType:options.dataType || "json",
+                  async:options.async || true,
+                  beforeSend:options.beforeSend || function(){},
+                  success:options.success || function(){},
+                  error:options.error || function(){},
+                  complete:options.complete || function(){},
+                  timeout:options.timeout || 5000,
+                  cache:options.cache || false,
+                  contents:options.contents || "",
+                  contentType:options.contentType || "application/x-www-form-urlencoded; charset=UTF-8",
+                  context:options.context || "",
+                  headers:options.headers || "",
+                  statusCode:options.statusCode || {},
+               });
+            };   
+       },
+       getData:function(options){
+            var that = this,
+                opt = $.extend({
+                    url:'../libs/data/data.json',
+                    type:'POST',
+                    templateId:'',
+                    containter:'',
+                }, options);
+                
+            that.ajax({
+                'url':'../libs/data/data.json',
+                'type':'POST',
+                'beforeSend':function(){
+                   console.log('start')
+                },
+                'success':function(data){
+                   if(data && data != ''){
+                       that.templ({
+                            "templateId":opt.templateId,  //模板id
+                            "containter":opt.containter,  //输出容器,
+                            "data":data
+                       });
+                   };
+                }
+            });
+       }
+
+    };
+    var app = null;
+
+    if(this instanceof appFn){
+         app = this;
+    }else{
+        return new appFn();
+    }
+
+    return app;
+
+});
+
+

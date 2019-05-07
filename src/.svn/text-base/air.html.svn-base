@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>首页</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+   
+    <link rel="stylesheet" type="text/css" href="libs/weui/css/weui.css">
+    <link rel="stylesheet" type="text/css" href="libs/weui/css/jquery-weui.css">
+    <link rel="stylesheet" type="text/css" href="./css/app.css">
+    
+    <script src="libs/weui/js/jquery-2.1.4.js" type="text/javascript"></script>
+    <script src="libs/weui/js/fastclick.js" type="text/javascript"></script>
+
+    <script src="libs/weui/js/jquery-weui.min.js" type="text/javascript"></script>
+    <script src="libs/weui/js/swiper.min.js" type="text/javascript"></script>
+    <script src="libs/template7/template7.js" type="text/javascript"></script>
+    <script src="./js/app.js" type="text/javascript"></script>
+</head>
+<body>
+   <section class="wrap">
+       <!-- header start -->
+        <section class="header flex justify-b padding1">
+            
+            <!-- logo start-->
+            <a href="index.html" class="item-c">
+                <img src="images/logo.png" class="logo" alt="">
+            </a>
+            <!-- logo end-->
+
+            <!-- login start -->
+            <a href="login.html" class="item-c user"></a>
+            <!-- login end -->
+            
+        </section>
+        <!-- header end -->
+
+        <!-- content start -->
+        <section class="content">
+          
+           <!-- nav start --> 
+           <ul class="nav flex">
+               <li class="">
+                   <a href="#" class="b-right">首页</a>
+               </li>
+               <li class="">
+                   <a href="#" class="b-right">运价查询</a>
+               </li>
+               <li>
+                   <a href="#" class="">特价推荐</a>
+               </li>
+           </ul> 
+           <!-- nav end --> 
+
+           <!-- content-body start -->
+           <section class="content-body padding1">
+               <section class="height17"></section>
+               <!-- tab switch start -->
+               <section class="tab-switch "> 
+
+                   <!-- tab-head start -->
+                   <section class="tab-head border-bule flex">
+                       <section class="tab-link flex-auto t-center" data-toggle="air">
+                           空运查询
+                       </section>
+                       <section class="tab-link tab-link-active flex-auto t-center" data-toggle="ocean">
+                           海运查询
+                       </section>
+                   </section>
+                   <!-- tab-head end -->
+
+                   <!-- tab-body start -->
+                   <section class="tab-body">
+                       <section class="tab-item none" data-toggle="air">
+                           <!-- form start -->
+                           <form action="" class="form" method="POST" accept-charset="utf-8" id="air">
+                             
+                              <section class="form-rows flex">
+                                  <section class="form-label item-c shrink t-blue">起运港</section>
+                                  <section class="grow">
+                                     <input class="form-input" type="text" name="" value="" placeholder="中文名/英文名/三字代码">
+                                  </section>
+                              </section>
+
+                              <section class="form-rows flex">
+                                  <section class="form-label item-c shrink t-blue">目的港</section>
+                                  <section class="grow">
+                                     <input class="form-input" type="text" name="" value="" placeholder="中文名/英文名/三字代码">
+                                  </section>
+                              </section>
+                              
+                              <section class="form-rows flex">
+                                  <section class="form-label item-c shrink t-blue">币种</section>
+                                  <section class="grow">
+                                     <select name="" class="form-input">
+                                       <option value="">请选择</option>
+                                      
+                                     </select>
+                                  </section>
+                              </section>
+
+                              <section class="form-rows">
+                                  <button type="button" class="form-submit">查询</button>
+                              </section>
+                           </form>
+                           <!-- form end --> 
+                       </section>
+                       <section class="tab-item" data-toggle="ocean">
+                           <!-- form start -->
+                           <form action="" class="form" method="POST" accept-charset="utf-8" id="ocean">
+                             
+                              <section class="form-rows flex">
+                                  <section class="form-label item-c shrink t-blue">起运港</section>
+                                  <section class="grow">
+                                     <input class="form-input" type="text" name="" value="" placeholder="中文名/英文名/三字代码">
+                                  </section>
+                              </section>
+
+                              <section class="form-rows flex">
+                                  <section class="form-label item-c shrink t-blue">目的港</section>
+                                  <section class="grow">
+                                     <input class="form-input" type="text" name="" value="" placeholder="中文名/英文名/三字代码">
+                                  </section>
+                              </section>
+                              <section class="form-rows flex">
+                                  <section class="form-label item-c shrink t-blue">船公司</section>
+                                   <section class="grow">
+                                     <input class="form-input" type="text" name="" value="" placeholder="中文名/英文名/三字代码">
+                                  </section>
+                              </section>
+
+                              <section class="form-rows flex">
+                                  <section class="form-label item-c shrink t-blue">币种</section>
+                                  <section class="grow">
+                                     <select name="" class="form-input">
+                                       <option value="">请选择</option>
+                                      
+                                     </select>
+                                  </section>
+                              </section>
+
+                              <section class="form-rows">
+                                  <button type="button" class="form-submit">查询</button>
+                              </section>
+                           </form>
+                           <!-- form end --> 
+                       </section>
+                   </section>
+                   <!-- tab-body end -->
+
+               </section>
+
+               <!-- tab switch end -->
+
+           </section>
+           <!-- content-body end -->
+
+        </section>
+        <!-- content end -->
+   </section>
+
+   <!-- tamplate start -->
+   <script type="text/template7" id="formTest">
+      
+   </script>
+   <!-- tamplate end -->
+
+   <script  type="text/javascript">
+        $(function() {
+            var html = document.documentElement;
+            html.style.fontSize = html.getBoundingClientRect().width / 16 + 'px';
+
+            
+            $('.tab-head').tab({
+                'tabLink':'tab-link',   //点击触发事件样式
+                'toggle':'data-toggle',    //切换关联点
+                'tabSwitch':'tab-item',  //切换tabcontent样式
+                'activeClass':'tab-link-active',
+                
+            })
+        });
+        /* tempalte7模板调用基本方式 */
+        function tmplFn(){
+             var tmpl = $('#formTest').html(),
+                 data = {
+                    name:"张三",
+                    age:234,
+                 },
+                 compiledTemplate = Template7.compile(tmpl),
+                 //把数据打包丢进模板
+                 tempHtml = compiledTemplate(data);
+                 //在位置中输出模板
+                 $('#ouput').html(tempHtml);
+        }
+   </script>
+</body>
+</html>

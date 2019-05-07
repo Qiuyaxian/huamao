@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>首页</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+   
+    <link rel="stylesheet" type="text/css" href="libs/weui/css/weui.css">
+    <link rel="stylesheet" type="text/css" href="libs/weui/css/jquery-weui.css">
+    <link rel="stylesheet" type="text/css" href="./css/app.css">
+    
+    <script src="libs/weui/js/jquery-2.1.4.js" type="text/javascript"></script>
+    <script src="libs/weui/js/fastclick.js" type="text/javascript"></script>
+    <script src="libs/weui/js/jquery-weui.min.js" type="text/javascript"></script>
+    <script src="libs/weui/js/swiper.min.js" type="text/javascript"></script>
+    <script src="libs/template7/template7.js" type="text/javascript"></script>
+    <script src="./js/app.js" type="text/javascript"></script>
+</head>
+<body ontouchstart>
+   <section class="wrap">
+       <!-- header start -->
+       <section class="header-nav"> 
+            <section class="blue relative top">
+               <!-- <section class="back absolute"></section> -->
+               <section class="flex t-white">
+                   <section class="originating t-right">广州白云机场</section>
+                   <section class="line item-c shrink"></section>
+                   <section class="destination">啊比拉机场</section>
+               </section>
+               <section class="flex t-white">
+                   <section class="originating t-right">[CAN]</section>
+                   <section class="line item-c shrink"></section>
+                   <section class="destination">[ABJ]</section>
+               </section>
+               
+           </section>
+
+           <!-- tab-head start -->
+           <section class="tab-switch">
+                <section class="tab-head flex padding1">
+                   <section class="tab-link flex-auto t-center b-active" data-toggle="45">
+                       +45kg
+                   </section>
+                   <section class="tab-link flex-auto t-center" data-toggle="100">
+                       +100kg
+                   </section>
+                   <section class="tab-link flex-auto t-center" data-toggle="300">
+                       +300kg
+                   </section>
+                   <section class="tab-link flex-auto t-center" data-toggle="500">
+                       +500kg
+                   </section>
+                   <section class="tab-link flex-auto t-center" data-toggle="1000">
+                       +1000kg
+                   </section>
+               </section>
+           </section>
+           <!-- tab-head end -->
+       </section>
+       
+       <!-- header end -->
+
+        <!-- content start -->
+        <section class="content height padding-top">
+
+           <!-- tab switch start -->
+               <section class="tab-switch height"> 
+                   <!-- tab-body start -->
+                   <section class="tab-body height">
+                       <section class="tab-item height scroll" data-toggle="45" id="tab-item1">
+                           <ul id="tab-item-list" class="list"></ul>
+                       </section>
+
+                       <section class="tab-item height scroll none" data-toggle="100">
+                           <ul id="" class="list"></ul>
+                       </section>
+                       <section class="tab-item height scroll none" data-toggle="300">
+                           <ul id="" class="list"></ul>
+                       </section>
+                       <section class="tab-item height scroll none" data-toggle="500">
+                           <ul id="" class="list"></ul>
+                       </section>
+                       <section class="tab-item height scroll none" data-toggle="1000">
+                           <ul id="" class="list"></ul>
+                       </section>
+                   </section>
+                   <!-- tab-body end -->
+
+               </section>
+
+               <!-- tab switch end -->
+               <!-- <div class="weui-loadmore">
+                  <i class="weui-loading"></i>
+                  <span class="weui-loadmore__tips">正在加载</span>
+               </div> -->
+           </section>
+           <!-- content-body end -->
+
+        </section>
+        <!-- content end -->
+   </section>
+
+   <!-- tamplate start -->
+   <script type="text/template7" id="list">
+      <!-- list start -->
+      <ul class="list border-top">
+           {{#each list}}
+           <li class="list-item border-bottom">
+              <section class="padding5 gray">
+                  <p class="list-item-text relative">
+                     <span>航司：{{flight}}</span> 
+                     <span class="absolute right t-orange">￥{{price}}</span>
+                  </p>
+                  <p class="list-item-text">货物类型：{{cargoType}}</p>
+                  <p class="list-item-text">路线：{{route}}</p>
+                  <p class="list-item-text relative">
+                      <span>价格有效期：{{priceValidity}}</span>
+                      <span class="absolute right">{{model}}</span>
+                  </p>
+              </section>
+              
+              <!-- detail start -->
+              <section class="padding5 detail none">
+                  <section class="dettail-info flex">
+                      <section class="flex-auto">
+                          <p class="list-item-text">币种：{{detail.currencyType}}</p>
+                          <p class="list-item-text">安全附加费：￥{{detail.security}}</p>
+                          <p class="list-item-text">地面处理费：￥{{detail.ground}}</p>
+                          <p class="list-item-text">备注： {{detail.remarks}}</p>
+                          <p class="list-item-text">二程联运：{{detail.intermodal}}</p>
+                          <p class="list-item-text">航班信息</p>
+                      </section>
+                      <section class="flex-auto">
+                           <p class="list-item-text">区域： {{detail.area}}</p>
+                           <p class="list-item-text">燃油附加费： ￥{{detail.fuel}}</p>
+                           <p class="list-item-text">产品归属： {{detail.product}}</p>
+                      </section>
+                  </section>
+                  <p class="list-item-text t-orange">二程航班：{{detail}}</p>
+                  <table class="table">     
+                        <thead class="thead shallow">
+                            <tr>
+                                <td>航班号</td>
+                                <td>ETD</td>           
+                                <td>ETA</td>         
+                                <td>班期</td>       
+                                <td>客/货机</td>        
+                                <td>机型</td>
+                            </tr>
+                        </thead>
+                        <tbody class="tbody">
+                            {{#each info}} 
+                            <tr>
+                                <td>{{flight}}</td>    
+                                <td>{{etd}}</td>    
+                                <td>{{eta}}</td>    
+                                <td>{{schedule}}</td>        
+                                <td>{{type}}</td>
+                                <td>{{modelType}}</td>       
+                            </tr>
+                            {{/each}}
+                        </tbody>
+                    </table>
+                    <p class="list-item-text">备注：让3423424234</p>
+              </section>
+              <!-- detail end -->
+           </li>
+           {{/each}}
+       </ul>
+       <!-- list end -->
+   </script>
+   <!-- tamplate end -->
+   
+   <!-- tamplate start -->
+   <script type="text/template7" id="one">
+      <!-- list one start -->
+           <li class="list-item border-bottom">
+              <section class="padding5 gray">
+                  <p class="list-item-text relative">
+                     <span>航司：{{flight}}</span> 
+                     <span class="absolute right t-orange">￥{{price}}</span>
+                  </p>
+                  <p class="list-item-text">货物类型：{{cargoType}}</p>
+                  <p class="list-item-text">路线：{{route}}</p>
+                  <p class="list-item-text relative">
+                      <span>价格有效期：{{priceValidity}}</span>
+                      <span class="absolute right">{{model}}</span>
+                  </p>
+              </section>
+              
+              <!-- detail start -->
+              <section class="padding5 detail none">
+                  <section class="dettail-info flex">
+                      <section class="flex-auto">
+                          <p class="list-item-text">币种：{{detail.currencyType}}</p>
+                          <p class="list-item-text">安全附加费：￥{{detail.security}}</p>
+                          <p class="list-item-text">地面处理费：￥{{detail.ground}}</p>
+                          <p class="list-item-text">备注： {{detail.remarks}}</p>
+                          <p class="list-item-text">二程联运：{{detail.intermodal}}</p>
+                          <p class="list-item-text">航班信息</p>
+                      </section>
+                      <section class="flex-auto">
+                           <p class="list-item-text">区域： {{detail.area}}</p>
+                           <p class="list-item-text">燃油附加费： ￥{{detail.fuel}}</p>
+                           <p class="list-item-text">产品归属： {{detail.product}}</p>
+                      </section>
+                  </section>
+                  <p class="list-item-text t-orange">二程航班：{{detail.title}}</p>
+                  <table class="table">     
+                        <thead class="thead shallow">
+                            <tr>
+                                <td>航班号</td>
+                                <td>ETD</td>           
+                                <td>ETA</td>         
+                                <td>班期</td>       
+                                <td>客/货机</td>        
+                                <td>机型</td>
+                            </tr>
+                        </thead>
+                        <tbody class="tbody">
+                            {{#each info.table}} 
+                            <tr>
+                                <td>{{flight}}</td>    
+                                <td>{{etd}}</td>    
+                                <td>{{eta}}</td>    
+                                <td>{{schedule}}</td>        
+                                <td>{{type}}</td>
+                                <td>{{modelType}}</td>       
+                            </tr>
+                            {{/each}}
+                        </tbody>
+                    </table>
+                    <p class="list-item-text">备注：让3423424234</p>
+              </section>
+              <!-- detail end -->
+           </li>
+          
+       <!-- list one end -->
+   </script>
+   <!-- tamplate end -->
+   <script  type="text/javascript">
+        $(function() {
+            
+            app.init();
+
+        });
+   </script>
+</body>
+</html>

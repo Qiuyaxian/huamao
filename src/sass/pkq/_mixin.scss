@@ -1,0 +1,33 @@
+@mixin logo($width,$height){
+    width: $width;
+    height:$height;
+}
+
+@mixin headerColor($color){
+    background:$color;
+}
+
+
+@mixin prefix($rule,$style){
+   $style:-webkit-#{$rule};
+   $style:-moz-#{$rule};
+   $style:-ms-#{$rule};
+   $style:-o-#{$rule};
+   $style:#{$rule}; 
+}
+
+
+@mixin prefixDisplay($style){
+   display:-webkit-#{$style};
+   display:-moz-#{$style};
+   display:-ms-#{$style};
+   display:-o-#{$style};
+   display:#{$style}; 
+}
+/* nav start */
+@mixin headerNav($tColor,$bColor){
+   color:$tColor;
+   background:$bColor;
+
+}
+/* nav end */

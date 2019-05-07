@@ -1,0 +1,86 @@
+(function(){
+   
+     //validate 校验函数封装   
+    /*
+       参数说明 obj ：需要进行提交的表单对象 
+    */
+     
+    //登陆
+    if($('#login') && $('#login').length > 0){
+        longinVerify($('#login'));
+    }
+    //空运查询
+    if($('#air') && $('#air').length > 0){
+        longinVerify($('#air'));
+    }
+    //海运查询
+    if($('#ocean') && $('#ocean').length > 0){
+        longinVerify($('#ocean'));
+    }
+
+
+    function longinVerify(obj) {
+        obj.validate({
+            rules: {                                   //提示信息校验规则
+                select:{
+                    min:1
+                },
+                imgfile: {
+                    required: true,
+                    //minlength: 5
+                },
+                text: {
+                    required: true,
+                    maxlength:1000
+                }
+            },
+            messages: {                                 //提示信息校验规则内容
+                select:{
+                    min: "请输入选择"
+                },
+                imgfile: {
+                    required: "请输入密码",
+                },
+                text: {
+                    required: "请填写您的建议及意见",
+                    maxlength:"字符个数不能超过1000"
+                }
+            },
+
+            onfocusout: false,                             //指定是否在获取焦点时验证
+            onkeyup: false,                                //指定是否在敲击键盘时验证
+            onclick: false,                                //指定是否在鼠标点击时验证
+            focusInvalid: false,                           //提交表单后，未通过验证的表单（第一个或提交之前获得焦点的未通过验证的表单）会获得焦点
+            errorContainer: ".errorContainer",             //错误信息容器
+            errorLabelContainer: ".errorContainer ul",     //错误信息容器
+            wrapper: "li",                                 //错误信息外部包裹层
+            showErrors: function(errorMap, errorList) {
+                //显示错误提示信息
+                this.defaultShowErrors();
+
+                if ($(".errorContainer").css("display") == "block") {       //判断错误提示框状态
+                    var width = $(".errorContainer").width() / 2;
+                    var height = $(".errorContainer").height() / 2;
+                    $(".errorContainer").css({
+                        "margin-left": -width,
+                        "margin-top": -height
+                    });
+                    $(".errorContainer ul li").hide();                      //隐藏所有提示信息
+                    //只是显示第一条错误信息
+                    $(".errorContainer ul li label[style='display: inline-block;']").eq(0).parent().show();
+                    //隐藏台式提示信息框
+                    setTimeout('$(".errorContainer").fadeOut(500)', 2000);
+                }
+            },
+            errorPlacement: function(error, element) {
+                //错误信息提示插入
+                error.appendTo(element.next().next());  
+            },
+            submitHandler: function(form) { 
+                //此处为验证完后，表单提交方式，可以设置是异步还是同步
+                
+            }
+        });
+
+    }
+})();
