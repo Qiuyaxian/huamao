@@ -1,7 +1,31 @@
-# huamao
-#该项目使用了gulp+sass以及微信的weui框架进行开发，所以对页面进行开发与维护，请安装gulp和sass环境
-#为了适合多人开发与维护，请使用开发者的英文名作为js和css文件名前缀
-#该项目将会使用到tempate7.js模板进行页面的部分渲染。
-#为了方便调试，使用gulp作为服务器，无须再新开服务器就可以进行手机调试
-#ps：新增文件或者没有效果可以尝试重新运行gulp命令
+## 华贸公众号微信端物流信息查询
 
+## 技术栈
+
+<p> gulp + sass + jquery weui + tempate7.js </p>
+
+## 运行项目
+
+``` bash
+# install dependencies
+npm install
+
+# serve with hot reload at localhost:8080
+gulp
+
+# build and public
+gulp build
+
+```
+
+<h3>新增文件或者没有效果可以尝试重新运行gulp命令</h3>
+
+## 部分截图
+<p>
+  <img width="375" height="auto" src="./src/images/demo1.png">
+  <img width="375" height="auto" src="./src/images/demo2.png">
+  <img width="375" height="auto" src="./src/images/demo3.png">
+  <img width="375" height="auto" src="./src/images/demo4.png">
+  <img width="375" height="auto" src="./src/images/demo5.png">
+  <img width="375" height="auto" src="./src/images/demo6.png">
+</p>
